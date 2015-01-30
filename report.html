@@ -11,10 +11,56 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
-            <h4 class="well">Main Menu</h4>
+            <h3 class="well">Main Menu</h3>
         </div>
-        <div class="col-md-10">
-            <h4 class="well">Daily SyncUp</h4>
+        <div class="col-md-9">
+            <h3 class="well" style="background-color: #bbddaa">Daily SyncUp</h3>
+
+            <div class="panel panel-default">
+                <div class="panel-heading" style="background-color: #66aaee"><h4>Sahara MOS 6.1</h4></div>
+                <div class="panel-body">
+                    <p>A section description goes here.</p>
+                    <p>It can also be handy to list assignees here.</p>
+                    <ul>
+                        <li>Someone</li>
+                        <li>Someone else</li>
+                        <li>Again Someone else</li>
+                    </ul>
+
+                </div>
+                <table class="table">
+                    <tr class="row">
+                        <td class="col-md-10">An entry of whatever is here.</td>
+                        <td class="col-md-2"><button class="btn btn-danger">Remove</button></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col-md-10">One more entry of whatever is here.</td>
+                        <td class="col-md-2"><button class="btn btn-danger">Remove</button></td>
+                    </tr>
+                    <tr class="row">
+                        <td class="col-md-10">And some moar entry of whatever is here.</td>
+                        <td class="col-md-2"><button class="btn btn-danger">Remove</button></td>
+                    </tr>
+                </table>
+
+                <form action="/add_entry" method="post">
+                    <input type="hidden" name="section_id" value="should be set by a template engine">
+                    <table class="table">
+                        <tr class="row">
+                            <td class="col-md-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="sizing-addon1">Your status:</span>
+                                    <input type="text" name="payload" class="form-control"
+                                           placeholder="Enter your progress/status/whatever you have here">
+                                </div>
+                            </td>
+                            <td class="col-md-2">
+                                <input type="submit" class="btn btn-success" title="Add">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
         </div>
     </div>
 </div>
